@@ -13,7 +13,7 @@ import Footer from '../components/Footer.astro';
       <div class="absolute inset-0 overflow-hidden bg-stone-900">
         <div class="absolute inset-0 bg-stone-900/60 z-10"></div>
         <img 
-          src="/images/modern-black-garage-door-with-windows.jpg" 
+          src={`${import.meta.env.BASE_URL}images/modern-black-garage-door-with-windows.jpg`} 
           alt="Beautiful newly installed modern black garage door with windows by 3 Nails Garage Door" 
           class="w-full h-full object-cover object-center absolute inset-0 animate-hero-img origin-center"
         />
@@ -51,7 +51,7 @@ import Footer from '../components/Footer.astro';
           <!-- Service 1 Card -->
           <div onclick="document.getElementById('modal-repair').showModal()" class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col reveal delay-100 hover:-translate-y-1 cursor-pointer group">
             <div class="overflow-hidden h-48">
-              <img src="/images/broken-garage-door-spring-replacement.jpg" alt="Technician performing a broken garage door spring replacement and repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={`${import.meta.env.BASE_URL}images/broken-garage-door-spring-replacement.jpg`} alt="Technician performing a broken garage door spring replacement and repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
             <div class="p-8 flex-1 flex flex-col">
               <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">Garage Door Repair</h3>
@@ -67,7 +67,7 @@ import Footer from '../components/Footer.astro';
           <!-- Service 2 Card -->
           <div onclick="document.getElementById('modal-replace').showModal()" class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col reveal delay-200 hover:-translate-y-1 cursor-pointer group">
             <div class="overflow-hidden h-48">
-              <img src="/images/shoreline-carriage-house-garage-door.jpg" alt="Installation of a beautiful Shoreline Carriage House garage door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={`${import.meta.env.BASE_URL}images/shoreline-carriage-house-garage-door.jpg`} alt="Installation of a beautiful Shoreline Carriage House garage door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
             <div class="p-8 flex-1 flex flex-col">
               <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">Full Replacement</h3>
@@ -83,7 +83,7 @@ import Footer from '../components/Footer.astro';
           <!-- Service 3 Card -->
           <div onclick="document.getElementById('modal-gate').showModal()" class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col reveal delay-300 hover:-translate-y-1 cursor-pointer group">
             <div class="overflow-hidden h-48">
-              <img src="/images/automatic-gate-opener-installation.jpg" alt="Professional installation of an automatic gate opener system" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={`${import.meta.env.BASE_URL}images/automatic-gate-opener-installation.jpg`} alt="Professional installation of an automatic gate opener system" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
             <div class="p-8 flex-1 flex flex-col">
               <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">Gate Openers</h3>
@@ -106,7 +106,7 @@ import Footer from '../components/Footer.astro';
           <button onclick="document.getElementById('modal-repair').close()" class="absolute top-4 right-4 bg-stone-900/50 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-colors z-10" aria-label="Close modal">
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
-          <img src="/images/broken-garage-door-spring-replacement.jpg" alt="Garage Door Repair Services" class="w-full h-48 sm:h-64 object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/broken-garage-door-spring-replacement.jpg`} alt="Garage Door Repair Services" class="w-full h-48 sm:h-64 object-cover" />
           <div class="p-8 sm:p-10">
             <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">Comprehensive Garage Door Repair</h3>
             <p class="text-stone-600 mb-6 leading-relaxed">When your garage door stops working, it can bring your day to a grinding halt and compromise your home's security. Our expert technicians are equipped to handle any mechanical or electrical issue, safely and efficiently.</p>
@@ -136,7 +136,7 @@ import Footer from '../components/Footer.astro';
           <button onclick="document.getElementById('modal-replace').close()" class="absolute top-4 right-4 bg-stone-900/50 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-colors z-10" aria-label="Close modal">
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
-          <img src="/images/shoreline-carriage-house-garage-door.jpg" alt="New Garage Door Installation" class="w-full h-48 sm:h-64 object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/shoreline-carriage-house-garage-door.jpg`} alt="New Garage Door Installation" class="w-full h-48 sm:h-64 object-cover" />
           <div class="p-8 sm:p-10">
             <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">New Garage Door Installation</h3>
             <p class="text-stone-600 mb-6 leading-relaxed">A new garage door is one of the highest ROI investments you can make for your home's curb appeal. We supply and install premium doors that improve aesthetics, security, and energy efficiency.</p>
@@ -166,7 +166,7 @@ import Footer from '../components/Footer.astro';
           <button onclick="document.getElementById('modal-gate').close()" class="absolute top-4 right-4 bg-stone-900/50 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-colors z-10" aria-label="Close modal">
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
-          <img src="/images/automatic-gate-opener-installation.jpg" alt="Gate Opener Installation and Repair" class="w-full h-48 sm:h-64 object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/automatic-gate-opener-installation.jpg`} alt="Gate Opener Installation and Repair" class="w-full h-48 sm:h-64 object-cover" />
           <div class="p-8 sm:p-10">
             <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">Gate Opener Services</h3>
             <p class="text-stone-600 mb-6 leading-relaxed">Whether it is for a residential driveway or a heavy-duty commercial security gate, a reliable automatic opener is essential. We install and repair top-tier systems designed to withstand heavy use and weather.</p>
@@ -198,14 +198,14 @@ import Footer from '../components/Footer.astro';
           <div class="lg:w-1/2 grid grid-cols-2 gap-4">
             <div class="overflow-hidden rounded-xl shadow-md h-64 reveal delay-100">
               <img 
-                src="/images/garage-door-repair-technician.jpg" 
+                src={`${import.meta.env.BASE_URL}images/garage-door-repair-technician.jpg`} 
                 alt="Experienced 3 Nails Garage Door technician repairing a residential garage door" 
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div class="overflow-hidden rounded-xl shadow-md h-64 mt-8 reveal delay-200">
               <img 
-                src="/images/custom-wood-look-garage-door.jpg" 
+                src={`${import.meta.env.BASE_URL}images/custom-wood-look-garage-door.jpg`} 
                 alt="Recently installed custom wood-look garage door" 
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
@@ -248,10 +248,10 @@ import Footer from '../components/Footer.astro';
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="overflow-hidden rounded-lg h-48 reveal delay-200">
-              <img src="/images/commercial-ribbed-steel-garage-door.jpg" alt="Commercial ribbed steel garage door installation" class="object-cover h-full w-full hover:scale-110 transition-transform duration-700" />
+              <img src={`${import.meta.env.BASE_URL}images/commercial-ribbed-steel-garage-door.jpg`} alt="Commercial ribbed steel garage door installation" class="object-cover h-full w-full hover:scale-110 transition-transform duration-700" />
             </div>
             <div class="overflow-hidden rounded-lg h-48 reveal delay-300">
-              <img src="/images/modern-residential-garage-door.jpg" alt="Modern clean residential garage door" class="object-cover h-full w-full hover:scale-110 transition-transform duration-700" />
+              <img src={`${import.meta.env.BASE_URL}images/modern-residential-garage-door.jpg`} alt="Modern clean residential garage door" class="object-cover h-full w-full hover:scale-110 transition-transform duration-700" />
             </div>
           </div>
         </div>
