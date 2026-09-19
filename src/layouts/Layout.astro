@@ -1,0 +1,115 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Whether you need a full garage door replacement or just need to get yours repaired, 3 Nails Garage Door is here to serve you. 20+ years of experience in garage doors and gate openers." } = Astro.props;
+
+// AIO / SEO JSON-LD Schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "3 Nails Garage Door & Gate Opener",
+  "image": "https://www.3nailsgaragedoors.com/images/3-nails-garage-door-gate-opener-logo.jpg",
+  "description": description,
+  "url": "https://www.3nailsgaragedoors.com/",
+  "telephone": "+1-000-000-0000", // TODO: Update with real phone number
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "GA", // Assuming GA based on previous context, update if needed
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=100095116740388"
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Garage Door Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Garage Door Repair"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Garage Door Replacement"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gate Opener Installation & Repair"
+        }
+      }
+    ]
+  }
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | 3 Nails Garage Door</title>
+    
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content={`${title} | 3 Nails Garage Door`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.3nailsgaragedoors.com/" />
+    
+    <!-- Structured Data for AIO & Google -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body class="bg-stone-50 text-stone-900 font-sans antialiased flex flex-col min-h-screen">
+    <slot />
+    
+    <script>
+      // Intersection Observer for scroll animations
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              // Unobserve after animating so it only happens once
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1, // Trigger when 10% of element is visible
+          rootMargin: "0px 0px -50px 0px"
+        });
+
+        const hiddenElements = document.querySelectorAll(".reveal");
+        hiddenElements.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
+

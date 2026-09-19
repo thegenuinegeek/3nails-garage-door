@@ -1,0 +1,479 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Home">
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative stone-900 text-white overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden bg-stone-900">
+        <div class="absolute inset-0 bg-stone-900/60 z-10"></div>
+        <img 
+          src="/images/modern-black-garage-door-with-windows.jpg" 
+          alt="Beautiful newly installed modern black garage door with windows by 3 Nails Garage Door" 
+          class="w-full h-full object-cover object-center absolute inset-0 animate-hero-img origin-center"
+        />
+      </div>
+      
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-md reveal delay-100">
+          Reliable Garage Door & Gate Services
+        </h1>
+        <p class="text-xl md:text-2xl max-w-3xl mb-10 text-stone-100 drop-shadow-sm reveal delay-200">
+          Over 20 years of experience serving our community. Whether you need a full replacement or a quick repair, we are here to help.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 reveal delay-300">
+          <a href="#contact" class="px-8 py-4 bg-amber-700 hover:bg-amber-800 text-white font-bold rounded-md shadow-lg transition-all text-lg border border-transparent hover:scale-105 active:scale-95 duration-200">
+            Get a Free Quote
+          </a>
+          <a href="#services" class="px-8 py-4 bg-stone-900 bg-opacity-50 border-2 border-white hover:bg-white hover:text-stone-900 font-bold rounded-md shadow-lg transition-all text-lg backdrop-blur-sm hover:scale-105 active:scale-95 duration-200">
+            Our Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-stone-50 overflow-hidden relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Our Services</h2>
+          <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+            We provide comprehensive solutions for all your garage door and gate opener needs, specializing in durability and aesthetics.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 Card -->
+          <div onclick="document.getElementById('modal-repair').showModal()" class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col reveal delay-100 hover:-translate-y-1 cursor-pointer group">
+            <div class="overflow-hidden h-48">
+              <img src="/images/broken-garage-door-spring-replacement.jpg" alt="Technician performing a broken garage door spring replacement and repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">Garage Door Repair</h3>
+              <p class="text-stone-600 mb-6 flex-1">
+                Fast and reliable repairs for broken springs, cables, rollers, and off-track doors. We get your door working safely again without upselling.
+              </p>
+              <div class="text-amber-700 font-bold text-sm uppercase tracking-wide group-hover:translate-x-2 transition-transform flex items-center">
+                Learn More <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 Card -->
+          <div onclick="document.getElementById('modal-replace').showModal()" class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col reveal delay-200 hover:-translate-y-1 cursor-pointer group">
+            <div class="overflow-hidden h-48">
+              <img src="/images/shoreline-carriage-house-garage-door.jpg" alt="Installation of a beautiful Shoreline Carriage House garage door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">Full Replacement</h3>
+              <p class="text-stone-600 mb-6 flex-1">
+                Upgrade your home's curb appeal with a brand new, high-quality garage door. We offer a wide variety of styles, from modern to classic.
+              </p>
+              <div class="text-amber-700 font-bold text-sm uppercase tracking-wide group-hover:translate-x-2 transition-transform flex items-center">
+                Learn More <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 Card -->
+          <div onclick="document.getElementById('modal-gate').showModal()" class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col reveal delay-300 hover:-translate-y-1 cursor-pointer group">
+            <div class="overflow-hidden h-48">
+              <img src="/images/automatic-gate-opener-installation.jpg" alt="Professional installation of an automatic gate opener system" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">Gate Openers</h3>
+              <p class="text-stone-600 mb-6 flex-1">
+                Professional installation and repair for residential and commercial gate openers. Enjoy enhanced security, convenience, and peace of mind.
+              </p>
+              <div class="text-amber-700 font-bold text-sm uppercase tracking-wide group-hover:translate-x-2 transition-transform flex items-center">
+                Learn More <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Native HTML Modals for Services -->
+      
+      <!-- Modal 1: Repair -->
+      <dialog id="modal-repair" class="fixed inset-0 m-auto backdrop:bg-stone-900/80 p-0 rounded-2xl shadow-2xl w-[90%] max-w-2xl bg-white border-0 overflow-hidden transition-all text-left">
+        <div class="relative">
+          <button onclick="document.getElementById('modal-repair').close()" class="absolute top-4 right-4 bg-stone-900/50 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-colors z-10" aria-label="Close modal">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          <img src="/images/broken-garage-door-spring-replacement.jpg" alt="Garage Door Repair Services" class="w-full h-48 sm:h-64 object-cover" />
+          <div class="p-8 sm:p-10">
+            <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">Comprehensive Garage Door Repair</h3>
+            <p class="text-stone-600 mb-6 leading-relaxed">When your garage door stops working, it can bring your day to a grinding halt and compromise your home's security. Our expert technicians are equipped to handle any mechanical or electrical issue, safely and efficiently.</p>
+            <ul class="space-y-3 text-stone-600 mb-8">
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Broken Spring Replacement:</strong> Safely swapping out highly-tensioned torsion and extension springs.</span></li>
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Cable & Roller Repair:</strong> Fixing snapped cables and replacing noisy metal rollers with quiet nylon ones.</span></li>
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Off-Track Doors & Panels:</strong> Realigning doors that have jumped the track and repairing dented panels.</span></li>
+            </ul>
+            <div class="bg-stone-50 border border-stone-200 p-8 rounded-xl flex flex-col sm:flex-row gap-8 items-center">
+              <div class="flex-1 flex flex-col items-center text-center w-full">
+                <p class="text-stone-800 font-semibold mb-4">Want more info?</p>
+                <a href="#contact" onclick="document.getElementById('modal-repair').close()" class="w-full block bg-stone-900 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:bg-black transition-colors">Get a Free Quote</a>
+              </div>
+              <div class="hidden sm:block w-px h-24 bg-stone-200"></div>
+              <div class="flex-1 flex flex-col items-center text-center w-full">
+                <p class="text-stone-800 font-semibold mb-4">Need immediate assistance?</p>
+                <a href="tel:+10000000000" class="w-full block bg-amber-700 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:bg-amber-800 transition-colors">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Modal 2: Replacement -->
+      <dialog id="modal-replace" class="fixed inset-0 m-auto backdrop:bg-stone-900/80 p-0 rounded-2xl shadow-2xl w-[90%] max-w-2xl bg-white border-0 overflow-hidden transition-all text-left">
+        <div class="relative">
+          <button onclick="document.getElementById('modal-replace').close()" class="absolute top-4 right-4 bg-stone-900/50 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-colors z-10" aria-label="Close modal">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          <img src="/images/shoreline-carriage-house-garage-door.jpg" alt="New Garage Door Installation" class="w-full h-48 sm:h-64 object-cover" />
+          <div class="p-8 sm:p-10">
+            <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">New Garage Door Installation</h3>
+            <p class="text-stone-600 mb-6 leading-relaxed">A new garage door is one of the highest ROI investments you can make for your home's curb appeal. We supply and install premium doors that improve aesthetics, security, and energy efficiency.</p>
+            <ul class="space-y-3 text-stone-600 mb-8">
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Carriage House & Wood-Look:</strong> Classic, rustic styles with modern durability and low maintenance.</span></li>
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Modern Aluminum & Glass:</strong> Sleek, contemporary designs that let in natural light.</span></li>
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Insulated Steel (High R-Value):</strong> Improve your home's energy efficiency with multi-layer insulated doors.</span></li>
+            </ul>
+            <div class="bg-stone-50 border border-stone-200 p-8 rounded-xl flex flex-col sm:flex-row gap-8 items-center">
+              <div class="flex-1 flex flex-col items-center text-center w-full">
+                <p class="text-stone-800 font-semibold mb-4">Want more info?</p>
+                <a href="#contact" onclick="document.getElementById('modal-replace').close()" class="w-full block bg-stone-900 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:bg-black transition-colors">Get a Free Quote</a>
+              </div>
+              <div class="hidden sm:block w-px h-24 bg-stone-200"></div>
+              <div class="flex-1 flex flex-col items-center text-center w-full">
+                <p class="text-stone-800 font-semibold mb-4">Need immediate assistance?</p>
+                <a href="tel:+10000000000" class="w-full block bg-amber-700 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:bg-amber-800 transition-colors">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Modal 3: Gate Openers -->
+      <dialog id="modal-gate" class="fixed inset-0 m-auto backdrop:bg-stone-900/80 p-0 rounded-2xl shadow-2xl w-[90%] max-w-2xl bg-white border-0 overflow-hidden transition-all text-left">
+        <div class="relative">
+          <button onclick="document.getElementById('modal-gate').close()" class="absolute top-4 right-4 bg-stone-900/50 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-colors z-10" aria-label="Close modal">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          <img src="/images/automatic-gate-opener-installation.jpg" alt="Gate Opener Installation and Repair" class="w-full h-48 sm:h-64 object-cover" />
+          <div class="p-8 sm:p-10">
+            <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">Gate Opener Services</h3>
+            <p class="text-stone-600 mb-6 leading-relaxed">Whether it is for a residential driveway or a heavy-duty commercial security gate, a reliable automatic opener is essential. We install and repair top-tier systems designed to withstand heavy use and weather.</p>
+            <ul class="space-y-3 text-stone-600 mb-8">
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Swing & Slide Gates:</strong> Expert installation and motor repair for all automatic gate styles.</span></li>
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Smart Access Control:</strong> Integration with smartphone apps (like MyQ), keypad entry, and intercom systems.</span></li>
+              <li class="flex items-start"><svg class="w-5 h-5 text-amber-700 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <span><strong>Commercial Solutions:</strong> High-cycle motors and heavy-duty hardware for maximum security and durability.</span></li>
+            </ul>
+            <div class="bg-stone-50 border border-stone-200 p-8 rounded-xl flex flex-col sm:flex-row gap-8 items-center">
+              <div class="flex-1 flex flex-col items-center text-center w-full">
+                <p class="text-stone-800 font-semibold mb-4">Want more info?</p>
+                <a href="#contact" onclick="document.getElementById('modal-gate').close()" class="w-full block bg-stone-900 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:bg-black transition-colors">Get a Free Quote</a>
+              </div>
+              <div class="hidden sm:block w-px h-24 bg-stone-200"></div>
+              <div class="flex-1 flex flex-col items-center text-center w-full">
+                <p class="text-stone-800 font-semibold mb-4">Need immediate assistance?</p>
+                <a href="tel:+10000000000" class="w-full block bg-amber-700 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:bg-amber-800 transition-colors">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+    <!-- Why Choose Us / About -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+            <div class="overflow-hidden rounded-xl shadow-md h-64 reveal delay-100">
+              <img 
+                src="/images/garage-door-repair-technician.jpg" 
+                alt="Experienced 3 Nails Garage Door technician repairing a residential garage door" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-md h-64 mt-8 reveal delay-200">
+              <img 
+                src="/images/custom-wood-look-garage-door.jpg" 
+                alt="Recently installed custom wood-look garage door" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+          <div class="lg:w-1/2 reveal delay-300">
+            <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-6">Why Choose 3 Nails?</h2>
+            <p class="text-lg text-stone-600 mb-6">
+              With over 20 years in the garage door business, we have the expertise to give you the best recommendations and quality service. We treat every home as if it were our own, prioritizing safety and reliability.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-amber-700 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-stone-700 font-medium">20+ Years of Proven Industry Experience</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-amber-700 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-stone-700 font-medium">Honest, Transparent Pricing with No Hidden Fees</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-amber-700 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-stone-700 font-medium">Professional, Licensed, and Reliable Technicians</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Gallery Section -->
+    <section class="py-20 bg-stone-900 overflow-hidden relative">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-700 via-stone-900 to-stone-900"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="reveal delay-100">
+            <h3 class="text-3xl font-bold text-white mb-6">Commercial & Residential Solutions</h3>
+            <p class="text-stone-300 text-lg">
+              From heavy-duty commercial ribbed steel doors to modern residential glass and aluminum, we source and install top-tier materials engineered to withstand the elements and secure your property.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="overflow-hidden rounded-lg h-48 reveal delay-200">
+              <img src="/images/commercial-ribbed-steel-garage-door.jpg" alt="Commercial ribbed steel garage door installation" class="object-cover h-full w-full hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div class="overflow-hidden rounded-lg h-48 reveal delay-300">
+              <img src="/images/modern-residential-garage-door.jpg" alt="Modern clean residential garage door" class="object-cover h-full w-full hover:scale-110 transition-transform duration-700" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section for AIO/SEO -->
+    <section id="faq" class="py-24 bg-stone-50 overflow-hidden relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Frequently Asked Questions</h2>
+          <p class="text-lg text-stone-600">Click on a question to learn more about our processes and recommendations.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 Trigger -->
+          <div onclick="document.getElementById('modal-faq-1').showModal()" class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-stone-100 reveal delay-100 hover:shadow-md hover:border-amber-700/30 transition-all cursor-pointer group flex flex-col sm:flex-row sm:items-center justify-between">
+            <div class="flex-1 pr-4">
+              <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-700 transition-colors">How often should I service my garage door?</h3>
+              <p class="text-stone-600 line-clamp-2">We recommend having your garage door professionally inspected and serviced at least once a year. Regular maintenance prevents costly emergencies...</p>
+            </div>
+            <div class="mt-4 sm:mt-0 text-amber-700 font-bold text-sm uppercase tracking-wide flex items-center group-hover:translate-x-1 transition-transform whitespace-nowrap">
+              Read Full Answer <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+
+          <!-- FAQ 2 Trigger -->
+          <div onclick="document.getElementById('modal-faq-2').showModal()" class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-stone-100 reveal delay-200 hover:shadow-md hover:border-amber-700/30 transition-all cursor-pointer group flex flex-col sm:flex-row sm:items-center justify-between">
+            <div class="flex-1 pr-4">
+              <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-700 transition-colors">Do you repair broken garage door springs?</h3>
+              <p class="text-stone-600 line-clamp-2">Yes! Broken torsion and extension springs are one of the most common issues we fix. Never attempt to replace these yourself...</p>
+            </div>
+            <div class="mt-4 sm:mt-0 text-amber-700 font-bold text-sm uppercase tracking-wide flex items-center group-hover:translate-x-1 transition-transform whitespace-nowrap">
+              Read Full Answer <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+
+          <!-- FAQ 3 Trigger -->
+          <div onclick="document.getElementById('modal-faq-3').showModal()" class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-stone-100 reveal delay-300 hover:shadow-md hover:border-amber-700/30 transition-all cursor-pointer group flex flex-col sm:flex-row sm:items-center justify-between">
+            <div class="flex-1 pr-4">
+              <h3 class="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-700 transition-colors">Can you fix and install gate openers as well?</h3>
+              <p class="text-stone-600 line-clamp-2">Absolutely. We have extensive experience repairing and installing both residential and commercial gate openers, integrating with smart home systems...</p>
+            </div>
+            <div class="mt-4 sm:mt-0 text-amber-700 font-bold text-sm uppercase tracking-wide flex items-center group-hover:translate-x-1 transition-transform whitespace-nowrap">
+              Read Full Answer <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Modals -->
+      <!-- FAQ Modal 1 -->
+      <dialog id="modal-faq-1" class="fixed inset-0 m-auto backdrop:bg-stone-900/80 p-0 rounded-2xl shadow-2xl w-[90%] max-w-2xl bg-white border-0 overflow-hidden transition-all text-left">
+        <div class="relative p-8 sm:p-10">
+          <button onclick="document.getElementById('modal-faq-1').close()" class="absolute top-4 right-4 bg-stone-100 hover:bg-stone-200 text-stone-900 p-2 rounded-full transition-colors z-10" aria-label="Close modal">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          
+          <div class="flex items-start mb-6 pr-8">
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0 mt-1">Q</div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 leading-tight">How often should I service my garage door?</h3>
+          </div>
+          
+          <div class="prose prose-stone max-w-none mb-8">
+            <p class="text-stone-600 leading-relaxed font-semibold mb-4 text-lg">We recommend scheduling a professional garage door tune-up and inspection at least once a year.</p>
+            <p class="text-stone-600 leading-relaxed mb-4">Your garage door is likely the largest and heaviest moving part of your home. It goes through thousands of opening and closing cycles annually. Over time, the constant tension, vibration, and temperature fluctuations can cause hardware to loosen, springs to fatigue, and tracks to misalign.</p>
+            <p class="text-stone-600 leading-relaxed mb-4">A standard annual maintenance visit includes:</p>
+            <ul class="space-y-2 text-stone-600 mb-4 list-disc pl-5">
+              <li><strong>Spring Tension Calibration:</strong> Ensuring the door remains perfectly balanced so the motor doesn't burn out prematurely.</li>
+              <li><strong>Roller & Hinge Lubrication:</strong> Eliminating grinding noises and reducing friction using specialized non-stick lithium or silicone sprays.</li>
+              <li><strong>Safety Sensor Alignment:</strong> Critical for preventing the door from closing on vehicles, pets, or people.</li>
+            </ul>
+            <p class="text-stone-600 leading-relaxed">Catching these mechanical issues early during an annual tune-up can save you hundreds of dollars in emergency repair costs and significantly extend the lifespan of your automatic opener.</p>
+          </div>
+          
+          <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-6">
+            <p class="text-stone-800 font-semibold text-center sm:text-left">Time for your annual tune-up?</p>
+            <a href="#contact" onclick="document.getElementById('modal-faq-1').close()" class="w-full sm:w-auto text-center bg-amber-700 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-amber-800 transition-colors">Schedule Service</a>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- FAQ Modal 2 -->
+      <dialog id="modal-faq-2" class="fixed inset-0 m-auto backdrop:bg-stone-900/80 p-0 rounded-2xl shadow-2xl w-[90%] max-w-2xl bg-white border-0 overflow-hidden transition-all text-left">
+        <div class="relative p-8 sm:p-10">
+          <button onclick="document.getElementById('modal-faq-2').close()" class="absolute top-4 right-4 bg-stone-100 hover:bg-stone-200 text-stone-900 p-2 rounded-full transition-colors z-10" aria-label="Close modal">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          
+          <div class="flex items-start mb-6 pr-8">
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0 mt-1">Q</div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 leading-tight">Do you repair broken garage door springs?</h3>
+          </div>
+          
+          <div class="prose prose-stone max-w-none mb-8">
+            <p class="text-stone-600 leading-relaxed font-semibold mb-4 text-lg text-red-600">Yes! But please, never attempt to replace or adjust a garage door spring yourself.</p>
+            <p class="text-stone-600 leading-relaxed mb-4">Garage door torsion and extension springs are under extreme, life-threatening tension. When a spring snaps, it sounds like a gunshot, and the door will immediately become too heavy for the opener to lift. Trying to bypass the motor or replace the spring without the proper winding bars and training can result in severe injury.</p>
+            <p class="text-stone-600 leading-relaxed mb-4"><strong>What you need to know about our spring repair:</strong></p>
+            <ul class="space-y-2 text-stone-600 mb-4 list-disc pl-5">
+              <li><strong>Lifespan:</strong> A standard builder-grade spring lasts about 10,000 cycles (roughly 5-7 years for an average family). We offer high-cycle replacements that last significantly longer.</li>
+              <li><strong>Replace in Pairs:</strong> If your door has two springs and one breaks, the other is right at the end of its lifespan. We always replace both to ensure perfectly balanced tension.</li>
+              <li><strong>Weight Calibration:</strong> We carry a massive inventory of springs on our trucks to precisely match the weight of your specific door on the very first visit.</li>
+            </ul>
+          </div>
+          
+          <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-6">
+            <p class="text-stone-800 font-semibold text-center sm:text-left">Trapped in your garage?</p>
+            <a href="tel:+10000000000" class="w-full sm:w-auto text-center bg-stone-900 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-black transition-colors">Call For Emergency Service</a>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- FAQ Modal 3 -->
+      <dialog id="modal-faq-3" class="fixed inset-0 m-auto backdrop:bg-stone-900/80 p-0 rounded-2xl shadow-2xl w-[90%] max-w-2xl bg-white border-0 overflow-hidden transition-all text-left">
+        <div class="relative p-8 sm:p-10">
+          <button onclick="document.getElementById('modal-faq-3').close()" class="absolute top-4 right-4 bg-stone-100 hover:bg-stone-200 text-stone-900 p-2 rounded-full transition-colors z-10" aria-label="Close modal">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          
+          <div class="flex items-start mb-6 pr-8">
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold text-xl mr-4 flex-shrink-0 mt-1">Q</div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 leading-tight">Can you fix and install gate openers as well?</h3>
+          </div>
+          
+          <div class="prose prose-stone max-w-none mb-8">
+            <p class="text-stone-600 leading-relaxed font-semibold mb-4 text-lg">Absolutely. We are comprehensive access control experts, handling both residential driveway gates and heavy-duty commercial security gates.</p>
+            <p class="text-stone-600 leading-relaxed mb-4">A malfunctioning gate can compromise your property's security and become a massive inconvenience. Whether your motor is burnt out, the track is bent, or the logic board is failing due to weather exposure, we can diagnose and repair the issue promptly.</p>
+            <p class="text-stone-600 leading-relaxed mb-4">Our gate operator services include:</p>
+            <ul class="space-y-2 text-stone-600 mb-4 list-disc pl-5">
+              <li><strong>Swing & Slide Gate Motors:</strong> We service and install top brands engineered for extreme weather, heavy usage, and longevity.</li>
+              <li><strong>Smart Access Control:</strong> We can upgrade your system to include Wi-Fi-enabled smartphone control (like MyQ), digital keypads, telephone entry intercoms, and magnetic vehicle exit wands.</li>
+              <li><strong>Solar-Powered Solutions:</strong> For remote driveway gates where running high-voltage electrical lines is too expensive, we install efficient solar-powered motors with deep-cycle battery backups.</li>
+            </ul>
+          </div>
+          
+          <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-6">
+            <p class="text-stone-800 font-semibold text-center sm:text-left">Looking to automate your gate?</p>
+            <a href="#contact" onclick="document.getElementById('modal-faq-3').close()" class="w-full sm:w-auto text-center bg-amber-700 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-amber-800 transition-colors">Request a Quote</a>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+    <!-- Contact / Lead Gen Section -->
+    <section id="contact" class="py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 bg-stone-50 rounded-2xl overflow-hidden shadow-xl border border-stone-100 reveal">
+          <div class="p-10 lg:p-14 bg-stone-900 text-white flex flex-col justify-center relative">
+            <!-- Decorative gradient orb -->
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+              <div class="absolute -top-24 -left-24 w-96 h-96 bg-amber-700 rounded-full blur-3xl mix-blend-screen"></div>
+            </div>
+            
+            <div class="relative z-10">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6">Get Your Free Quote</h2>
+              <p class="text-stone-300 text-lg mb-10">
+                Ready to upgrade or repair your garage door? Fill out the form, and our expert team will get back to you as soon as possible to discuss your needs.
+              </p>
+              <div class="space-y-8">
+                <div class="flex items-center group">
+                  <div class="w-14 h-14 bg-amber-700/20 group-hover:bg-amber-700/40 transition-colors rounded-full flex items-center justify-center mr-5">
+                    <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg">Call Us</h4>
+                    <p class="text-stone-300 group-hover:text-white transition-colors">Phone number goes here</p>
+                  </div>
+                </div>
+                <div class="flex items-center group">
+                  <div class="w-14 h-14 bg-amber-700/20 group-hover:bg-amber-700/40 transition-colors rounded-full flex items-center justify-center mr-5">
+                    <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg">Email Us</h4>
+                    <p class="text-stone-300 group-hover:text-white transition-colors">info@3nailsgaragedoors.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lead Gen Form -->
+          <div class="p-10 lg:p-14 bg-white">
+            <form action="#" method="POST" class="space-y-6">
+              <div class="bg-stone-50 border border-stone-200 text-stone-800 rounded-md p-4 text-sm mb-6">
+                <strong>Admin Note:</strong> Hook this form up to Web3Forms, Formspree, or Netlify Forms for static hosting lead capture.
+              </div>
+              
+              <div>
+                <label for="name" class="block text-sm font-medium text-stone-700 mb-1">Full Name</label>
+                <input type="text" name="name" id="name" class="block w-full rounded-md border-stone-300 shadow-sm focus:border-amber-700 focus:ring-amber-700 border p-3 text-stone-900 bg-white transition-shadow" required>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-stone-700 mb-1">Email Address</label>
+                <input type="email" name="email" id="email" class="block w-full rounded-md border-stone-300 shadow-sm focus:border-amber-700 focus:ring-amber-700 border p-3 text-stone-900 bg-white transition-shadow" required>
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-stone-700 mb-1">Phone Number</label>
+                <input type="tel" name="phone" id="phone" class="block w-full rounded-md border-stone-300 shadow-sm focus:border-amber-700 focus:ring-amber-700 border p-3 text-stone-900 bg-white transition-shadow">
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-medium text-stone-700 mb-1">Service Needed</label>
+                <select id="service" name="service" class="block w-full rounded-md border-stone-300 shadow-sm focus:border-amber-700 focus:ring-amber-700 border p-3 text-stone-900 bg-white transition-shadow">
+                  <option>Garage Door Repair</option>
+                  <option>Full Replacement</option>
+                  <option>Gate Opener</option>
+                  <option>Other / Unsure</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-stone-700 mb-1">How can we help?</label>
+                <textarea id="message" name="message" rows="4" class="block w-full rounded-md border-stone-300 shadow-sm focus:border-amber-700 focus:ring-amber-700 border p-3 text-stone-900 bg-white transition-shadow"></textarea>
+              </div>
+              <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-lg text-sm font-bold text-white bg-amber-700 hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-700 transition-all hover:-translate-y-1 mt-6">
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
